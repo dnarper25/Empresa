@@ -1,4 +1,13 @@
-package PACKAGE_NAME;
+public class Gerente extends Empleado {
+    private double bonus;
 
-public class Gerente {
+    public Gerente(String nombre, String dni, double salarioBase, double bonus) {
+        super(nombre, dni, salarioBase);
+        this.bonus = bonus;
+    }
+
+    @Override
+    public double calcularSueldo() {
+        return getSalarioBase() + bonus;
+    }
 }
